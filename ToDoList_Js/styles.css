@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #5663a3, #88a9b7);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: #f0c37a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 5px solid #fb6a9d; /* Initial border color */
+    animation: containerBlink 1s infinite; /* Blink animation */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    border: 2px solid #6a82fb;
+    border-radius: 5px;
+    margin-right: 10px;
+    animation: blink 1s infinite;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #fc5c7d;
+    outline: none;
+    animation: none; /* Stop blinking when focused */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2e28d0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #72ac75;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s;
+    
+}
+
+li span {
+    flex: 1;
+    color: #2315a7;
+}
+
+li .timestamp {
+    color: black;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+li button {
+    background-color: #ff4757;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li button:hover {
+    background-color: #ff6b81;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: #6a82fb;
+    }
+    50% {
+        border-color: #fc5c7d;
+    }
+}
+
+@keyframes containerBlink {
+    0%, 100% {
+        border-color: #6a82fb;
+    }
+    50% {
+        border-color: #fc5c7d;
+    }
+}
